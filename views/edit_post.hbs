@@ -1,5 +1,5 @@
 <container class="p-3">
-  <form class="col-lg-5 p-5 text-bg-light mx-auto rounded-4 border position-relative" action="/edit_post/submit/{{id}}" method="post" id="edit_post">
+  <form class="col-lg-5 p-5 text-bg-light mx-auto border position-relative" action="/edit_post/submit/{{id}}" method="post" id="edit_post">
     <button type="button" title="Delete Post" class="btn btn-sm btn-outline-danger position-absolute" style="top:1rem;right:1rem" aria-label="deletePost" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
     <h2 class="text-center mb-4">Edit Post</h2>
     <input type="hidden" id="postID" name="id" value="{{id}}">
@@ -20,7 +20,7 @@
 <!-- delete modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content rounded-0">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="deleteModalLabel">Are you sure you want to delete?</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
