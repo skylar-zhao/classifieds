@@ -1,0 +1,25 @@
+body {
+  padding: 2rem 2rem 0px 2rem;
+  background-color: hsl(0, 0%, 99%);
+  font: 16px 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+}
+nav {
+  background-color: #f3ebe1;
+}
+
+/* sticky footer styling from  https://css-tricks.com/couple-takes-sticky-footer/ */
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}

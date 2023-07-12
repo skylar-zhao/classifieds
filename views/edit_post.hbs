@@ -1,0 +1,37 @@
+<container class="p-3">
+  <form class="col-lg-5 p-5 text-bg-light mx-auto rounded-4 border position-relative" action="/edit_post/submit/{{id}}" method="post" id="edit_post">
+    <button type="button" title="Delete Post" class="btn btn-sm btn-outline-danger position-absolute" style="top:1rem;right:1rem" aria-label="deletePost" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+    <h2 class="text-center mb-4">Edit Post</h2>
+    <input type="hidden" id="postID" name="id" value="{{id}}">
+    <div class="mb-4">
+      <input type="text" class="form-control" id="title" placeholder="Title (optional)" aria-describedby="title"
+        name="title" value="{{postTitle}}" autocomplete="off">
+    </div>
+    <div class=" mb-4">
+      <textarea type="text" class="form-control" id="body" aria-describedby="body" placeholder="Type in your stuff..."
+        name="body" maxlength="300" rows="4" required>{{postBody}}</textarea>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</container>
+
+<!-- delete modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="deleteModalLabel">Are you sure you want to delete?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <form action="/edit_post/delete/{{id}}" method="post" id="delete_post">
+          <input type="hidden" id="deletePostID" name="id" value="{{id}}">
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
