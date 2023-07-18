@@ -3,6 +3,7 @@ import hbs from "express-handlebars";
 import passport from "passport";
 import session from "express-session";
 import connect_sqlite3 from "connect-sqlite3";
+import * as http from "http";
 
 // routes
 import index from "./routes/index.js";
@@ -14,7 +15,8 @@ import edit_post from "./routes/edit_post.js";
 import logout from "./routes/logout.js";
 
 const app = express();
-const PORT = 3000;
+// const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 const SQLiteStore = connect_sqlite3(session);
 
@@ -63,9 +65,14 @@ app.engine(
   })
 );
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
+const server = http.createServer(app);
+server.listen(port, () => {
+  console.log(`App listening on port ${port}`);
 });
+
+// app.listen(port, () => {
+//   console.log(`App listening on port ${port}`);
+// });
 
 // error handler
 app.use(function (err, req, res, next) {
