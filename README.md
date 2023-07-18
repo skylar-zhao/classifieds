@@ -1,7 +1,7 @@
 My take on classified newspaper ads as a website. 
 
 Functions:
-- View all posts on the homepage <b>*</b> 
+- View all posts on the homepage 
 - Make an account
 - Sign in
 - View all posts under their account
