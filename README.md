@@ -1,5 +1,7 @@
 My take on classified newspaper ads as a website. 
 
+[↗ Video demo](https://skylarzhao.com/assets/portfolio/classifieds/demo.mp4)
+
 Functions:
 - View all posts on the homepage 
 - Make an account
